@@ -15,8 +15,6 @@ import Adicional.*;
 import POM.CLogin;
 
 public class Login {
-
-
 	CapturarPantalla c = new CapturarPantalla();// objeto para otra clase
 	Reporte rep = Reporte.getInstance();
 	Parametros param = Parametros.getInstance();	
