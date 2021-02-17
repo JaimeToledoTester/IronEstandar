@@ -97,7 +97,9 @@ public class Base {
 		}catch(org.openqa.selenium.NoSuchElementException e) {return false;}
 	}
 	public void go(String url) {
+		try {
 		driver.get(url);
+		}catch(Exception e) {System.out.println("Error en Base Mgo");}
 	}
 	public void waitimplic() {
     	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
