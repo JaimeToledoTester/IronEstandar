@@ -12,8 +12,6 @@ import org.testng.annotations.AfterTest;
 
 public class Eventos { 
 	
-
-
 	Base b=Base.getInstance();
 	CEventos ceven=CEventos.getInstance();	
 	MediaEntityModelProvider evidencia;
