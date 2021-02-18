@@ -13,7 +13,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityModelProvider;
 import Adicional.CapturarPantalla;
 import Adicional.Reporte;
-import POM.CPlaneacionTxt;
+import POM.CPlanTxt;
 
 public class Planeacion_Txt {
 
@@ -22,7 +22,7 @@ public class Planeacion_Txt {
 	ExtentTest test;
 	ExtentReports extent;
 	private WebDriver driver;
-	CPlaneacionTxt cplan;
+	CPlanTxt cplan;
 	MediaEntityModelProvider evidencia;
     String Page;
 
