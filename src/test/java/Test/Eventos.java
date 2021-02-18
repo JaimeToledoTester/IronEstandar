@@ -6,7 +6,6 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityModelProvider;
 import Adicional.CapturarPantalla;
-import Adicional.Data_Provider;
 import Adicional.Parametros;
 import Adicional.Reporte;
 import POM.CEventos;
@@ -20,6 +19,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 
 public class Eventos { 
 	
@@ -43,7 +43,7 @@ public class Eventos {
 			 extent=rep.addreporte();
     } 	
 	
-  @Test (dataProvider = "Eventos", dataProviderClass = Data_Provider.class)
+  @Test (dataProvider = "Eventos", dataProviderClass=DataProvider.class)
   public void eventos(String empresa,String name,String type,String certificate,String credential,String transline,String driver_name,
 		  String trailer_status,String validate_trailer_status,String phone,String validate_phone,String boxes,String validate_boxes,
 		  String notes,String validate_notes,String confirmation,String validate_confirmation,String custodian,String validate_custodian,

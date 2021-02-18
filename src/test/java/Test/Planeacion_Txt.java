@@ -6,12 +6,12 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityModelProvider;
 import Adicional.CapturarPantalla;
-import Adicional.Data_Provider;
 import Adicional.Reporte;
 import POM.CPlaneacionTxt;
 
@@ -33,7 +33,7 @@ public class Planeacion_Txt {
 		extent=rep.addreporte();
 	} 
 
-	@Test(dataProvider = "UsersandTxt", dataProviderClass = Data_Provider.class)
+	@Test(dataProvider = "UsersandTxt", dataProviderClass = DataProvider.class)
 	public void Loginm(String empresa,String usuario, String contraseña, String ruta, String url){
 	try {
 	test = extent.createTest("CP:Cargar Planeacion de :"+empresa);

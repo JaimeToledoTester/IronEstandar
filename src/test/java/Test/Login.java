@@ -2,6 +2,7 @@ package Test;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 
 import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.*;
@@ -34,7 +35,7 @@ public class Login {
 		extent=rep.addreporte();
 	} 
 	
-	@Test(dataProvider = "Usuarios", dataProviderClass = Data_Provider.class)
+	@Test(dataProvider = "Usuarios", dataProviderClass = DataProvider.class)
 	public void Loginm(String empresa,String usuario,String contraseña, String url){
 	try {	
     test=extent.createTest("CP: Validar Login de "+empresa);
