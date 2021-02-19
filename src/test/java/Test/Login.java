@@ -14,9 +14,9 @@ public class Login {
 	String Page;	 
 	 
 	@Test(dataProvider = "Usuarios", dataProviderClass = Data_Provider.class)
-	public void login(String empresa,String usuario,String contrase�a, String url){
+	public void login(String empresa,String usuario,String contrasena, String url){
 	try {	 
-	clog.login(usuario, contrase�a, url, empresa);
+	clog.login(usuario, contrasena, url, empresa);
 	Page= new Object(){}.getClass().getEnclosingMethod().getName();
 	}catch(Exception e) {System.out.println("Error en TestLogin, Metodo login "+e);}
 	}

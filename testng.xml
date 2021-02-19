@@ -5,8 +5,8 @@
     <classes>
      <class name="Test.Global"/>
      <!--    <class name="Test.Login"/>-->
-       <!--<class name="Test.Planeacion_Txt"/>-->
-     <class name="Test.Eventos"/>
+       <class name="Test.Planeacion_Txt"/>
+     <!--<class name="Test.Eventos"/>-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

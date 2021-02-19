@@ -16,9 +16,9 @@ public class Planeacion_Txt {
     String Page;
 
 	@Test(dataProvider = "UsersandTxt", dataProviderClass = Data_Provider.class)
-	public void CargaPlan(String empresa,String usuario, String contrase�a, String rutatxt, String url){
+	public void CargaPlan(String empresa,String usuario, String contrasena, String rutatxt, String url){
 	try {
-    cplan.CargarTxt(usuario, contrase�a, url, rutatxt,empresa);	
+    cplan.CargarTxt(usuario, contrasena, url, rutatxt,empresa);	
 	Page= new Object(){}.getClass().getEnclosingMethod().getName();
 	}catch(Exception e) {System.out.println("Error en Test Cargar Planeaci�n, Metodo CargaPlan: "+e);}
 	}

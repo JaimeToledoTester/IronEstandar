@@ -24,13 +24,13 @@ public class Eventos {
 		  String echo_trailer,String validate_echo_trailer,String echo_tract,String validate_echo_tract,String weight,String validate_weight,
 		  String pallets,String validate_pallets,String seal_1,String validate_seal_1,String seal_2,String validate_seal_2,
 		  String seal_3,String validate_seal_3,String shipment,String validate_shipment,String trailer_plate,String validate_trailers_plates,
-		  String tract_plate,String validate_tracts_plates,String usuario,String contrase�a,String url) {
+		  String tract_plate,String validate_tracts_plates,String usuario,String contrasena,String url) {
   try { 
      ceven.hacer_evento(empresa, name, type, certificate, credential, transline, driver_name, trailer_status, 
 			  validate_trailer_status, phone, validate_phone, boxes, validate_boxes, notes, validate_notes, confirmation, validate_confirmation,
 			  custodian, validate_custodian, echo_trailer, validate_echo_trailer, echo_tract, validate_echo_tract, weight, validate_weight, 
 			  pallets, validate_pallets, seal_1, validate_seal_1, seal_2, validate_seal_2, seal_3, validate_seal_3, shipment, validate_shipment, 
-			  trailer_plate, validate_trailers_plates, tract_plate, validate_tracts_plates, usuario, contrase�a, url); 
+			  trailer_plate, validate_trailers_plates, tract_plate, validate_tracts_plates, usuario, contrasena, url); 
     }catch(Exception e) {System.out.println("Error en Test Eventos");}
  
     }
