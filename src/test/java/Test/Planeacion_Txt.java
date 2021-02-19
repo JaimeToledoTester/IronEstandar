@@ -1,10 +1,10 @@
 package Test;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+<<<<<<< HEAD
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -35,26 +35,40 @@ public class Planeacion_Txt {
 
 	@Test(dataProvider = "UsersandTxt", dataProviderClass = DataProvider.class)
 	public void Loginm(String empresa,String usuario, String contraseña, String ruta, String url){
+=======
+import org.testng.annotations.Test;
+import Adicional.Data_Provider;
+import POM.Base;
+import POM.CPlanTxt;
+
+public class Planeacion_Txt {
+	Base b=Base.getInstance();
+	CPlanTxt cplan=CPlanTxt.getInstance();	
+	Base base;
+    String Page;
+
+	@Test(dataProvider = "UsersandTxt", dataProviderClass = Data_Provider.class)
+	public void CargaPlan(String empresa,String usuario, String contraseña, String rutatxt, String url){
+>>>>>>> JaimeMejoras
 	try {
-	test = extent.createTest("CP:Cargar Planeacion de :"+empresa);
-    cplan.CargarTxt(extent, test, usuario, contraseña, url, ruta);	
+    cplan.CargarTxt(usuario, contraseña, url, rutatxt,empresa);	
 	Page= new Object(){}.getClass().getEnclosingMethod().getName();
-	}catch(Exception e) {System.out.println("Error en TestLogin, Metodo Loginm");}
+	}catch(Exception e) {System.out.println("Error en Test Cargar Planeación, Metodo CargaPlan: "+e);}
 	}
 
 	@AfterMethod
 	public void ResultadoPlanTxt(ITestResult result) {
-		cplan.resultest(result,test,driver,Page);	
+		b.resultest(result,Page);	
 	}
 	
 	@AfterTest
 	public void testend() throws Exception {		
-		extent.flush(); 		
-		driver.quit();
+		cplan.extent.flush(); 		
+		cplan.driver.quit();
 	}
 
 	@AfterClass
 	public void afterClass() throws Exception {
- 		driver.quit();
+ 		cplan.driver.quit();
 	}
 }
