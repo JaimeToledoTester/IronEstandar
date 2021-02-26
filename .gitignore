@@ -1,2 +1,6 @@
 Reporte/
 test-output/
+target/surefire-reports/
+target/test-classes/POM/CPlanTxt.class
+target/test-classes/Test/Login$1.class
+target/test-classes/Test/Planeacion_Txt$1.class
