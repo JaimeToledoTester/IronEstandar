@@ -4,10 +4,10 @@ Adicional\Data_Provider.class
 Test\Eventos.class
 Adicional\FileChooser.class
 Adicional\Parametros.class
-POM\CPlaneacionTxt.class
 Adicional\CapturarPantalla.class
 Adicional\LeerJson.class
 Test\Global.class
+POM\CPlanTxt.class
 POM\CEventos.class
 Test\Planeacion_Txt.class
 Test\Login.class
