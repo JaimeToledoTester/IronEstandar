@@ -85,7 +85,7 @@ public class Mail2 {
         } catch (AddressException ex) {
              System.out.println("Error enviar mail 1: "+ex.getStackTrace());
         } catch (MessagingException ex) {
-        	 System.out.println("Error enviar mail 2: "+ex.getStackTrace());
+        	 System.out.println("Error enviar mail 2: "+ex);
         }catch(Exception ex) {
         	 System.out.println("Error enviar mail 3: "+ex.getStackTrace());
         }

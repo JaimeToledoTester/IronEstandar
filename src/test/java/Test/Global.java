@@ -35,7 +35,7 @@ public class Global {
   @AfterSuite
   public void afterSuite() {
 	  try {
-//    b.driver.quit();
+      b.driver.quit();
 	  m.EnviarEmail();
 	  }catch(Exception e) {System.out.println("Error en Global, enviarmail: "+e);}
 
