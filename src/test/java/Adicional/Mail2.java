@@ -43,24 +43,23 @@ public class Mail2 {
 		} catch (Exception e) {
 			System.out.println("Error al llamar metodo Comprimir en Mail" + e.getStackTrace());
 		}
-	    Properties propiedad = new Properties();
-        propiedad.setProperty("mail.smtp.host", "smtp.gmail.com");
-        propiedad.setProperty("mail.smtp.starttls.enable", "true");
-        propiedad.setProperty("mail.smtp.port", "587");
-        propiedad.setProperty("mail.smtp.auth","true");
-        propiedad.setProperty("mail.smtp.user",p.muser);
-        propiedad.setProperty("mail.smtp.clave",p.mpass);
-        
-        Session sesion = Session.getDefaultInstance(propiedad);
-        MimeMessage mail = new MimeMessage(sesion);
-        
+	    
         try {
+        	Properties propiedad = new Properties();
+            propiedad.setProperty("mail.smtp.host", "smtp.gmail.com");
+            propiedad.setProperty("mail.smtp.starttls.enable", "true");
+            propiedad.setProperty("mail.smtp.port", "587");
+            propiedad.setProperty("mail.smtp.auth","true");
+            propiedad.setProperty("mail.smtp.user",p.muser);
+            propiedad.setProperty("mail.smtp.clave",p.mpass);
+            Session sesion = Session.getDefaultInstance(propiedad);
+            MimeMessage mail = new MimeMessage(sesion);
         	  //--------------------------------------------destinatarios
             InternetAddress [] destinatarios=new InternetAddress[p.mto.size()];
-            for (int i = 0; i < p.mto.size(); i++) {
+            for (int i= 0; i< p.mto.size(); i++) {
              destinatarios[i]=(new InternetAddress(p.mto.get(i)));
 			}
-            mail.addRecipients(Message.RecipientType.TO, destinatarios);
+            mail.addRecipients(Message.RecipientType.TO,destinatarios);
             //--------------------------------------------------------------
             mail.setFrom(new InternetAddress (p.mfrom));//de quien          
             mail.setSubject(p.msubject);//asunto
@@ -78,17 +77,17 @@ public class Mail2 {
             //--------------------------------------se guarda en el mail todos los bodypart
             mail.setContent(todo);
             //-------------------------------enviar correo
-            Transport transport= sesion.getTransport("smtp");
-            transport.connect(p.mfrom,p.mpass);//loggin
+            Transport transport=sesion.getTransport("smtp"); 
+            transport.connect("smtp.gmail.com",p.mfrom,p.mpass);//loggin
             transport.sendMessage(mail,mail.getAllRecipients());
             transport.close();
             System.out.println("Listo, revise su correo");      
         } catch (AddressException ex) {
-            System.out.println("Error 1:"+ex.getStackTrace());
+             System.out.println("Error enviar mail 1: "+ex.getStackTrace());
         } catch (MessagingException ex) {
-        	 System.out.println("Error 2:"+ex.getStackTrace());
+        	 System.out.println("Error enviar mail 2: "+ex.getStackTrace());
         }catch(Exception ex) {
-        	 System.out.println("Error 3:"+ex.getStackTrace());
+        	 System.out.println("Error enviar mail 3: "+ex.getStackTrace());
         }
         }
 	}

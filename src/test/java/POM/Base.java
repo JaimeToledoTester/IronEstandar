@@ -30,7 +30,7 @@ public class Base {
 	ExtentTest test;
 	ExtentReports extent;
 	Reporte rep = Reporte.getInstance();
-	private WebDriver driver;
+	public WebDriver driver;
 
 	public WebDriver mdriverbase() {
 		return driver;

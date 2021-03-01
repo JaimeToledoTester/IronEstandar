@@ -69,13 +69,14 @@ public class CLogin {
    this.url=url;
    this.test=b.createtest("CP: Validar Login de ",empresa);
    Url();
-   }catch(Exception e) {System.out.println("Error en CLogin, Metodo Login"+e);}
+   }catch(Exception e) {System.out.println("Error en CLogin, Metodo Login: "+e);}
    }
    
    private static CLogin clog;
 
 	private CLogin() {
-
+		 this.driver=b.mdriverbase();//se trae el driver de Base
+		 this.extent=b.createreport();//crea reporte  
 	}
 
 	public static CLogin getInstance() {

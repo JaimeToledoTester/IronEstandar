@@ -33,6 +33,7 @@ public class CPlanTxt {
 
 	public void selmod() {
 		try {
+			test=b.createtest("CP:Cargar Planeacion de :",empresa);
 			b.wait(Modulo);
 			b.clic(Modulo);
 			cargatxt();
@@ -71,7 +72,6 @@ public class CPlanTxt {
 			this.contraseña = contraseña;
 			this.empresa = empresa;
 			this.url = url;
-			test=b.createtest("CP:Cargar Planeacion de :",empresa);
 			Login();
 		} catch (Exception e) {
 			System.out.println("Error en clase CPlaneación: " + e);
@@ -81,8 +81,8 @@ public class CPlanTxt {
 	private static CPlanTxt plantxt;
 
 	private CPlanTxt() { 
-		 this.driver=b.mdriverbase();//se trae el driver de Base
-		 this.extent=b.createreport();//crea reporte  
+		this.driver=b.mdriverbase();
+		this.extent=b.createreport();//crea reporte  
 	}
 
 	public static CPlanTxt getInstance() {

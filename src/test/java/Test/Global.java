@@ -1,63 +1,44 @@
 package Test;
 
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import org.json.simple.parser.ParseException;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
 import Adicional.LeerJson;
 import Adicional.Mail2;
+import POM.Base;
+
 import org.testng.annotations.Test;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
 
 public class Global {
-	
+	Base b=Base.getInstance();
 	LeerJson js = LeerJson.getInstance();
 	Mail2 m= new Mail2();
 	
   @BeforeMethod
   public void beforeMethod() throws FileNotFoundException, IOException, ParseException {
+	  try {
 	  js.leerjson();
-  }
+	  }catch(Exception e) {System.out.println("Error en Global,leerjson: "+e);}
 
-  @AfterMethod
-  public void afterMethod() {
-	  
-  }
-
-  @BeforeClass
-  public void beforeClass() {
-	 
-  }
-
-  @AfterClass
-  public void afterClass() {
-  }
-
-  @BeforeTest
-  public void beforeTest() {
   }
 
   @Test
   public void testeo() {
+	  try {
 	  assert(true);
-  }
-  @AfterTest
-  public void afterTest() {
+	  }catch(Exception e) {System.out.println("Error en Global, Mtesteo: "+e);}
   }
 
-  @BeforeSuite
-  public void beforeSuite() {
-  }
 
   @AfterSuite
   public void afterSuite() {
+	  try {
+//    b.driver.quit();
 	  m.EnviarEmail();
-  }
+	  }catch(Exception e) {System.out.println("Error en Global, enviarmail: "+e);}
+
+	  }
 
 }

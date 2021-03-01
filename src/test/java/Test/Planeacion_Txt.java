@@ -31,11 +31,11 @@ public class Planeacion_Txt {
 	@AfterTest
 	public void testend() throws Exception {		
 		cplan.extent.flush(); 		
-		cplan.driver.quit();
+//		cplan.driver.quit();
 	}
 
 	@AfterClass
 	public void afterClass() throws Exception {
- 		cplan.driver.quit();
+//		cplan.driver.quit();
 	}
 }

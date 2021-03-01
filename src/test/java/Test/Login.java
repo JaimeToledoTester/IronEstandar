@@ -30,12 +30,12 @@ public class Login {
 	@AfterTest
 	public void testend() throws Exception {		
 		clog.extent.flush();
- 		clog.driver.quit();
+// 		clog.driver.quit();
 	}
 
 	@AfterClass
 	public void afterClass() throws Exception {
- 		clog.driver.quit();
+// 		clog.driver.quit();
 	}
 
 }

@@ -50,7 +50,6 @@ public class Comprimir {
 		File archivoSeleccionado = jfc.getSelectedFile();
 		String rutacarpeta = archivoSeleccionado.getParent();
 		String nuevaruta = rutacarpeta.replaceAll("\\\\", "\\\\\\\\");
-		// rutacarpeta.replaceAll(regex, replacement);
 		System.out.println("CARPETA SELECCIONADA -> " + nuevaruta);
 		String destino = nuevaruta + ".zip";
 		System.out.println("DESTINO -> " + destino);
