@@ -1,7 +1,6 @@
 package Test;
 
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
@@ -31,11 +30,6 @@ public class Planeacion_Txt {
 	@AfterTest
 	public void testend() throws Exception {		
 		cplan.extent.flush(); 		
-//		cplan.driver.quit();
 	}
 
-	@AfterClass
-	public void afterClass() throws Exception {
-//		cplan.driver.quit();
-	}
 }

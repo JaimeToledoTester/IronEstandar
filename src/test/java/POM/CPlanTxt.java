@@ -2,7 +2,6 @@ package POM;
 
 import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
@@ -20,7 +19,6 @@ public class CPlanTxt {
 	By SelecTxt = By.id("uploadFileName");
 	By CargaTxt = By.id("file_upload_button");
 	String ruta, usuario, contraseña, url, empresa;
-	public WebDriver driver;
 
 	public void Login() {
 		try {
@@ -81,7 +79,6 @@ public class CPlanTxt {
 	private static CPlanTxt plantxt;
 
 	private CPlanTxt() { 
-		this.driver=b.mdriverbase();
 		this.extent=b.createreport();//crea reporte  
 	}
 

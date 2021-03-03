@@ -6,7 +6,6 @@ import Adicional.Data_Provider;
 import POM.Base;
 import POM.CEventos;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 
@@ -44,13 +43,6 @@ public class Eventos {
  	@AfterTest
  	public void testend() throws Exception {		
  		ceven.extent.flush();
- 		ceven.driver.quit();
- 	}
-
- 	@AfterClass
- 	public void afterClass() throws Exception {
- 		ceven.driver.quit();
- 	}
- 	
+ 	}	
 
 }

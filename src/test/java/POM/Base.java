@@ -156,19 +156,17 @@ public class Base {
 			if (result.getStatus() == ITestResult.FAILURE) {
 				test.log(Status.FAIL, MarkupHelper.createLabel(
 						"El Resultado del Test:  " + result.getName() + " no fue exitoso!", ExtentColor.RED));
-				evidencia = c.tomarcaptura(driver, modulo);
+				evidencia=c.tomarcaptura(driver, modulo);
 				test.fail("Evidencia: ", evidencia);
 			} else if (result.getStatus() == ITestResult.SUCCESS) {
 				test.log(Status.PASS,
 						MarkupHelper.createLabel("Caso de prueba " + result.getName() + " Exitoso", ExtentColor.GREEN));
-				evidencia = c.tomarcaptura(driver, modulo);
-				test.pass("Evidencia: ", evidencia);
-//			wait(logout);
-//			clic(logout);
+				evidencia=c.tomarcaptura(driver, modulo);
+				test.pass("Evidencia: ",evidencia);
 			} else if (result.getStatus() == ITestResult.SKIP) {
 				test.log(Status.SKIP, MarkupHelper.createLabel("Caso de prueba " + result.getName() + "fue saltado",
 						ExtentColor.YELLOW));
-				test.skip("Evidencia: ", evidencia);
+				test.skip("Evidencia: ",evidencia);
 			}
 			test.log(Status.INFO, "A continucion se muestran los pasos para la prueba: ");
 		} catch (Exception e) {

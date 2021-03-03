@@ -1,6 +1,5 @@
 package Test;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.AfterTest;
@@ -30,12 +29,7 @@ public class Login {
 	@AfterTest
 	public void testend() throws Exception {		
 		clog.extent.flush();
-// 		clog.driver.quit();
 	}
 
-	@AfterClass
-	public void afterClass() throws Exception {
-// 		clog.driver.quit();
-	}
 
 }

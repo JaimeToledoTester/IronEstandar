@@ -23,7 +23,7 @@ public class CapturarPantalla {
     public 	MediaEntityModelProvider tomarcaptura(WebDriver driver,String Nombre)throws IOException, InterruptedException{
         MediaEntityModelProvider evidencia=null;
     	//System.out.println("=================CAPTURANDOPANTALLA===========");
-    	Thread.sleep(2000);
+//    	Thread.sleep(2000);
 		int num=idevidencia();
 		TakesScreenshot captura= (TakesScreenshot) driver;
 		File srcFile=captura.getScreenshotAs(OutputType.FILE);

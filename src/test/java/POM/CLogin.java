@@ -4,7 +4,6 @@ package POM;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -15,13 +14,12 @@ public class CLogin {
     By Pass=By.id("Password");
     By Loggin=By.xpath("//input[@value='Iniciar Sesión']");
     By asser=By.xpath("//*[contains(@href,'LogOut')]"); 
-    String usuario,contraseña,url;
+    String usuario,contraseña,url,empresa;
     public ExtentReports extent;
-    ExtentTest test;
-    public WebDriver driver;
-     
+    ExtentTest test;     
 
    public void Url() {
+	   this.test=b.createtest("CP: Validar Login de ",empresa);
 	   ExtentTest curl = test.createNode("Url de Prueba"); // son escenarios o pasos
 	  	if (url.isEmpty()) {
 	  		Assert.fail("No se encontro una URL de Pruebas");
@@ -67,7 +65,7 @@ public class CLogin {
    this.usuario=usuario;
    this.contraseña=contraseña;
    this.url=url;
-   this.test=b.createtest("CP: Validar Login de ",empresa);
+   this.empresa=empresa;
    Url();
    }catch(Exception e) {System.out.println("Error en CLogin, Metodo Login: "+e);}
    }
@@ -75,7 +73,6 @@ public class CLogin {
    private static CLogin clog;
 
 	private CLogin() {
-		 this.driver=b.mdriverbase();//se trae el driver de Base
 		 this.extent=b.createreport();//crea reporte  
 	}
 

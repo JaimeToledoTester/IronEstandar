@@ -4,8 +4,8 @@
   <test  name="Test">
     <classes>
       <class name="Test.Global"/>
-      <!--<class name="Test.Planeacion_Txt"/>-->
-      <!-- <class name="Test.Login"/>-->
+       <class name="Test.Planeacion_Txt"/>
+       <class name="Test.Login"/>
       <!--<class name="Test.Eventos"/>-->
     </classes>
   </test> <!-- Test -->
